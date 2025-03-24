@@ -29,7 +29,7 @@ async def query_db(ctx: Context, query: str, endpoint: str = "http://localhost:1
     ctx.info("query_db: %s" % query)
     """reuse the graphqlclient """
     graphql_client: httpx.AsyncClient = ctx.request_context.lifespan_context.graphql_client
-    # Form a cache key if attempting to cache responses (could include include user, tool, query, and variables)
+    # Form a cache key if attempting to cache responses (could include user, tool, query, and variables)
     # Prepare headers (e.g., authorization) for the request
     headers = {"Content-Type": "application/json"}
     # if auth_token: # get this from an env variable

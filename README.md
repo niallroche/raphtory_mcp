@@ -1,6 +1,6 @@
 # Raphtory GraphQL Schema Explorer
 
-This Python module provides a FastMCP server that exposes GraphQL schema information for Raphtory graphs through a set of HTTP resources. It allows users to explore and understand the structure of graphs, including node properties and relationship types.
+This Python module provides a FastMCP server that exposes GraphQL schema information for Raphtory graphs through a set of HTTP resources. It allows LLMs to explore and understand the structure of graphs, including node properties and relationship types.
 
 ## Features
 
@@ -34,6 +34,7 @@ Returns detailed schema information for a specific graph:
 ### 3. Implementation Details
 
 The module uses:
+- An executing Raphtory GraphQL server (this needs to be running)
 - `httpx` for async HTTP requests with HTTP/2 support
 - FastMCP for resource management
 - Persistent connections through a global async client
@@ -107,7 +108,7 @@ The module includes error handling for:
 - FastMCP
 - httpx
 - Python 3.x
-- GraphQL endpoint (default: http://localhost:1736/)
+- a running Raphtory GraphQL endpoint (default: http://localhost:1736/)
 
 ## Configuration
 
